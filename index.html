@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Scala Downunder - Presentation</title>
+		<title>Adapting Functional Programming using Scala</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -42,11 +42,124 @@
 						<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Title - over here</h1>
-					<p>We should not be using Power Point</p>
+					<h1>Adapting Functional Programming using Scala</h1>
+					<p>A journey of adapting FP concepts using Scala in a traditional/enterprise environment</p>
 				</section>
 
 				<section>
+                    <h2>Small team @firstnzcapital Wellington</h2>
+                    <ul>
+                        <li>2+ years of scala production use</li>
+                        <li>what worked</li>
+                        <li>what failed</li>
+                        <li>code examples</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>The Start</h1>
+                        <ul>
+                            <li>POC on Scala while @CatalystNZ, lightning talk on WellyJUG (Jun 2011)</li>
+                            <li>move to @firstnzcapital... scala session on Exceptional workshop (Nov 2011)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <div class="person" style="padding: 20px">
+                            <div class="person-photo" style="background-image: url('images/kalman.jpg')"><p class="person-name">Kalman</p></div>
+                        </div>
+                        <div class="person" style="padding: 20px">
+                            <div class="person-photo" style="background-image: url('images/stephen.jpg')"><p class="person-name">Stephen</p></div>
+                        </div>
+                        <div class="person" style="padding: 20px">
+                            <div class="person-photo" style="background-image: url('images/ross.jpg')"><p class="person-name">Ross</p></div>
+                        </div>
+                        <div class="person" style="padding: 20px">
+                            <div class="person-photo" style="background-image: url('images/kc.jpg')"><p class="person-name"></p></div>
+                        </div>
+                        <div class="person" style="padding: 20px">
+                            <div class="person-photo" style="background-image: url('images/ha.jpg')"><p class="person-name"></p></div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h1>FP adaptation</h1>
+                        <ul>
+                            <li>favor val, minimize var</li>
+                            <li>no loops</li>
+                            <li>return sane values</li>
+                            <li>Mixed project with existing Java - (Maven, Spring, Jpa)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4>Worked</h4>
+                        <ul>
+                            <li>Combinators in collection api (map, filter, flatMap, foreach, groupBy)</li>
+                            <li>return something sensible, avoid Unit/void</li>
+                            <li>Better types</li>
+                            <li>match/case</li>
+                            <li>higher order functions</li>
+                        </ul>
+                        <h4>Failed</h4>
+                        <ul>
+                            <li>Scala Enumeration, went back to Java enums</li>
+                            <li>Hiding mutability of JPA, collections and objects</li>
+                            <li>Too much types, generics and traits with JPA</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Going Reactive</h1>
+                        <ul>
+                            <li>3 in the team enrolled on Principles of Reactive Programming (Coursera)</li>
+                            <li>rough date</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <div class="person" style="padding: 20px">
+                            <div class="person-photo" style="background-image: url('images/scott.jpg')"><p class="person-name">Scott</p></div>
+                        </div>
+                        <div class="person" style="padding: 20px">
+                            <div class="person-photo" style="background-image: url('images/stephen.jpg')"><p class="person-name">Stephen</p></div>
+                        </div>
+                        <div class="person" style="padding: 20px">
+                            <div class="person-photo" style="background-image: url('images/ross.jpg')"><p class="person-name">Ross</p></div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h1>FP adaptation</h1>
+                        <ul>
+                            <li>Futures</li>
+                            <li>Async</li>
+                            <li>Iteratees</li>
+                            <li>Reactive Mongo and solr -> es</li>
+                            <li>Play Framework</li>
+                            <li>Apache Camel</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4>Worked</h4>
+                        <ul>
+                            <li>For comprehension with Futures (reactive mongo, WS <- solr/es, WS <- camel)</li>
+                            <li>Cake pattern for testing</li>
+                        </ul>
+                        <ul>
+                            <li>Play Action Composition (2.0 -> 2.1)</li>
+                            <li>untyped json, use case classes and format macro</li>
+                            <li>Apache camel operations used Java collections (avoid javaconversions use javaconverters)</li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
 					<h1>Heads Up</h1>
 					<p>
 						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
@@ -358,7 +471,7 @@ function linkify( selector ) {
       <a href="http://scaladownunder.org" target=_blank>@ScalaDownunder</a>
     </div>
     <div class="footer" style="position: absolute; bottom: 30px; right: 160px;">
-      <a href="https://twitter.com/handle" target=_blank>@paul_dijou</a>
+      <a href="https://twitter.com/handle" target=_blank>@jkyamog</a>
     </div>
 
 		<img src="images/scala-logo.png" style="position: absolute; top: 20px; left: 20px;" border="0" />

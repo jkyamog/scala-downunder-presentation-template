@@ -1,5 +1,23 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.person-photo {
+    top: 0px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-color: #fff;
+    border: 0px;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.person-name {
+    top: 20px;
+    left: 100px;
+    position: relative;
+}
 /**
  * Solarized Dark theme for reveal.js.
  * Author: Achim Staebler
