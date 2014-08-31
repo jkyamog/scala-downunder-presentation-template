@@ -18,6 +18,23 @@
     left: 100px;
     position: relative;
 }
+
+#auckland {
+    float: right;
+    width: 260px;
+    margin-right: 200px;
+    margin-top: -50px;
+    border: 0;
+}
+
+#sydney {
+    float: right;
+    width: 260px;
+    margin-right: 200px;
+    margin-top: -50px;
+    border: 0;
+}
+
 /**
  * Solarized Dark theme for reveal.js.
  * Author: Achim Staebler
